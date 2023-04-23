@@ -1,0 +1,311 @@
+/************DEFAULTS*************/
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+h3,p {
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    position: fixed;
+    display: inline-grid;
+    z-index: 1000;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+header, footer, nav {
+    padding: 1rem;
+}
+/*************Article styling**************/
+.main-article{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: column;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin-top: 5%;
+    margin-left: 2.5%;
+    margin-bottom: 3%;
+    overflow-x: hidden;
+}
+
+.container-img img {
+    margin-right: 15px;
+    padding: 0;
+    border-radius: 1rem;
+    width: 18rem;
+    height: 20rem;
+}
+.container-text {
+    display:table-column;
+    align-self: center;
+    position: relative;
+}
+
+.container-text p {
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family:  Courier;
+    color: rgb(122, 175, 221);
+    margin: 0;
+}
+.container-text p::before {
+    content: "</p>";
+    color: rgba(108, 188, 228, 0.289);
+    font-size: 1.2rem;
+}
+.container-text p::after {
+    content: "</p>";
+    color: rgba(108, 188, 228, 0.289);
+    font-size: 1.2rem;
+}
+/************LAYOUT START*************/
+
+main {
+    display: grid;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    overflow-y: auto;
+    background: radial-gradient(closest-side, rgb(254, 229, 241) 50%, rgb(157, 198, 246) 110%);
+}
+
+header, footer, nav {
+    padding: 1rem;
+}
+
+.content {
+    min-height: 100vh;
+    padding-right:2rem;
+    padding-left: 2rem;
+}
+
+/******** HEADER START**********/
+.menu-btn img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+.title {
+    border-radius: 10px;
+    box-shadow: 0px 3px 58px 21px rgba(0,0,0,0.12);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#quote{
+    text-align: center;
+    margin: 0;
+    font-family: 'Brush Script MT';
+    font-weight: lighter;
+    color: rgb(144, 191, 236);
+    font-size: 3rem;
+    text-shadow:1px 1px 2px rgb(253, 210, 210);
+}
+
+  /*************NAVBAR START**************/
+nav {
+    display: none;
+    flex: 0 0 15vw;
+    flex-direction: row;
+    row-gap: 2px;
+    padding: 0%;
+}
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu {
+    background: radial-gradient(circle,  rgb(180, 210, 246) 30%, rgb(108, 163, 227) 150%);
+    max-height: 100vh;
+    text-align: center;
+    min-width: 17vw;
+    position: relative;
+}
+.menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(78, 97, 238, 0.21);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 80%;
+    padding: 0 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul li{
+    font-weight: bold;
+    padding: 1.7rem 0;
+    border-bottom: 1px solid rgb(245, 238, 238);
+    width: 100%;
+    font-size: 19px;
+} 
+.menu ul li  a {
+    text-decoration: none;
+    color:rgb(255, 228, 255);
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+.menu ul li  a:hover {
+    color: rgb(249, 228, 249);
+    transition: all .15s ease-in-out;
+    text-shadow: 2px 1px 4px rgb(234, 238, 245);
+    color: rgb(230, 163, 234);
+    font-size: 20px;
+}
+.menu ul li ol
+{
+  display: none;
+}
+.menu ul li:hover ol
+{
+  margin-top: 10%;
+  display:block;
+  background: radial-gradient(circle,  rgb(204, 226, 252) 30%, rgb(177, 210, 248) 150%);
+  padding: 10px 0px;
+  box-shadow: 0px 0px 50px 0px rgba(115, 175, 209, 0.5);
+}
+.search-btn:hover ul{
+    display: block;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 50px 0px rgba(115, 175, 209, 0.5);
+}
+
+/*************NAVBAR END**************/
+
+/************LOGO EDITING*************/
+
+#logo {
+    font-size: 70px;
+    font-weight: bolder;
+    font-family: 'roboto';
+    font-style: oblique;
+    color: rgb(184, 137, 184);
+    margin-bottom: 0px;
+    text-shadow: 2px 1px 7px rgb(86, 128, 184);
+}
+
+#logo-name2 {
+    color: rgb(246, 233, 233);
+    font-weight: lighter;
+    font-size: 13px;
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+#logo-name > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#logo-proff {
+    font-size: smaller;
+    color: rgb(250, 235, 235);
+    font-weight: lighter;
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+
+
+/*************FOOTER START**************/
+
+footer {
+    box-shadow: 0px 3px 58px 21px rgba(0,0,0,0.12);
+    background: radial-gradient(closest-side, rgb(184, 211, 247) 50%, rgba(0,0,0,0.12) 110%);
+    height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.163);
+    text-align:center;
+    font-weight: bolder;
+    font-size: 0.8rem;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container-img img {
+        width: 25rem;
+        height: 25rem;
+        }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container-img img {
+        width: 25rem;
+        height: 25rem;
+        }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main {
+        grid-template-columns: fit-content(200px) 1fr!important;
+    }
+    
+    nav {
+        display: flex;
+    }
+    .title-container {
+        justify-content: center;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .menu-close {
+        display: none;
+    }
+    h1#quote::before {
+        content: "<h1>...";
+        font-size:smaller;
+        font-family: 'Courier ';
+        color: rgba(108, 188, 228, 0.289);
+        text-shadow: none;
+    }
+    h1#quote::after {
+        content: "...</h1>";
+        font-size: smaller;
+        font-family: 'Courier ';
+        color: rgba(108, 188, 228, 0.289);
+    }
+
+   .main-article {
+    display: flex;
+    flex-direction: row;
+   }
+   .container-img img {
+    width: 25rem;
+    height: 25rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

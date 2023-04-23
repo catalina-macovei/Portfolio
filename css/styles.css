@@ -1,0 +1,481 @@
+/*******animations********/
+@keyframes bounce { 
+    0%   {
+            transform: translateY(10px) rotate(720deg);
+            background:radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40%,  rgba(255, 0, 255, 0.199));
+        }
+
+    50%  {
+            transform: translateY(400px);
+            background:radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40%,  rgba(0, 183, 255, 0.289));
+            border-radius: 50%;
+        } 
+
+    75%  {
+            transform: translateY(300px);
+    } 
+
+    83%  {
+            transform: translateY(50px);
+    }
+
+    100% {
+            transform: translateY(10px);
+            border-radius: 50%;
+        } 
+
+  } 
+  
+  .area{ 
+    display: none;
+    height:100vh; 
+    width: 70vw;
+    position: fixed;
+    flex-direction: row;
+    left: 30%;
+    overflow: hidden;
+    right: 5%;
+    margin-bottom:0;
+  } 
+
+  .ball{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin-left: 5rem;
+  }
+
+  #ball1{ 
+    animation: bounce 18s ease-in-out infinite; 
+    background: radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40% ,rgba(255, 0, 255, 0.193));
+    width: 150px;
+    height: 150px;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  } 
+
+  #ball2{ 
+    animation: bounce 10s ease-in  infinite; 
+    background: radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40% ,rgba(0, 200, 255, 0.193));  
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+  } 
+
+  #ball3{ 
+    width: 130px;
+    height: 130px;
+    animation: bounce 3s;
+    background: radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40% ,rgba(255, 0, 255, 0.193)); 
+    animation-iteration-count: infinite;
+  }
+  #ball4{ 
+    width: 130px;
+    height: 130px;
+    animation: bounce 15s ease-in infinite; 
+    background: radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40% ,rgba(0, 119, 255, 0.193)); 
+    animation-iteration-count: infinite;
+  }
+  #ball5{ 
+    animation: bounce 10s ease-in; 
+    background: radial-gradient(rgba(255, 0, 255, 0.016) 0%,transparent 40% ,rgba(0, 200, 255, 0.193));  
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+  } 
+
+
+/*******animations********/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    position: fixed;
+    display: inline-grid;
+    z-index: 1000;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.icon-home img{
+    display: none;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+
+/************LAYOUT START*************/
+
+main {
+    display: grid;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    overflow-y: auto;
+    background: radial-gradient(closest-side, rgb(254, 229, 241) 50%, rgb(157, 198, 246) 110%);
+}
+
+header, footer, nav {
+    padding: 1rem;
+}
+
+.content {
+    min-height: 100vh;
+    padding-right:2rem;
+    padding-left: 2rem;
+}
+
+/******** HEADER START**********/
+.menu-btn img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+.title {
+    border-radius: 10px;
+    box-shadow: 0px 3px 58px 21px rgba(0,0,0,0.12);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    z-index: 1;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quote{
+    text-align: center;
+    margin: 0;
+    font-family: 'Brush Script MT';
+    font-weight: lighter;
+    color: rgb(144, 191, 236);
+    font-size: 3rem;
+    text-shadow:1px 1px 2px rgb(253, 210, 210);
+}
+
+
+/*********** Main cards: IMG and CONTENT start *************/
+.container {
+    min-height: 100vh;
+    overflow-y: auto;
+    background: radial-gradient(closest-side, rgb(254, 229, 241) 50%, rgb(157, 198, 246) 110%);
+}
+
+header, footer, nav {
+    padding: 1rem;
+}
+
+.content {
+    min-height: 100vh;
+    padding-right:2rem;
+    padding-left: 2rem;
+    
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+i.logo-home {
+    text-shadow: 2px 1px 7px rgb(129, 169, 222);
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    width: 100%;
+    font-size: 2.5rem;
+    color: rgba(229, 167, 234, 0.863);
+    font-family: 'Glook';
+    text-shadow: 1px 1px 2px rgb(177, 174, 174);
+}
+
+.main-card h1 > span {
+    display: list-item;
+    list-style: none;
+}
+
+.main-card h1::before {
+    content: "<h1> Lorem...";
+    font-family: 'Courier ';
+    font-weight: lighter;
+    font-size: smaller;
+    font-size: 1.65rem;
+    font-family: 'courier';
+    color: rgb(196, 218, 248);
+    text-shadow:1px 1px 2px rgb(246, 215, 215);
+}
+
+.main-card h1::after{
+    content: "...nam exercitationem? </h1>";
+    font-family: 'Courier ';
+    font-weight: lighter;
+    font-size: 1.65rem;
+    font-family: 'courier';
+    color: rgb(195, 216, 243);
+    text-shadow:1px 1px 2px rgb(246, 215, 215);
+    
+}
+
+button.click-me {
+    z-index: 1;
+    background: radial-gradient(circle,  rgb(177, 206, 240) 30%, rgb(83, 142, 210) 150%);
+    border: 3px solid rgb(149, 196, 249);
+    border-radius: 100px;
+    transition: all .15s ease-in-out;
+    font-weight: bolder;
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    font-family:'Roboto';
+    text-shadow: 1px 1px 2px white;
+    text-decoration: none;
+    color:rgb(210, 109, 182);
+  }
+
+button.click-me:active {
+    background-color: #a1b9eb;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+    background: whitesmoke;
+}
+
+button.click-me:hover {
+    box-shadow: 0 0 10px 0 rgb(161, 204, 254) inset, 0 0 20px 5px rgb(142, 186, 236);
+    border: 1px solid rgb(138, 166, 252);
+    cursor: pointer;
+  }
+
+
+/**********IMG editing**********/
+
+.icon-home img {
+    max-width: 28vw;
+    object-fit: contain;
+    z-index: 1;
+}
+  
+/*************NAVBAR START**************/
+nav {
+    z-index: 1;
+    display: none;
+    flex: 0 0 15vw;
+    flex-direction: row;
+    row-gap: 2px;
+    padding: 0%;
+}
+
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu {
+    background: radial-gradient(circle,  rgb(180, 210, 246) 30%, rgb(108, 163, 227) 150%);
+    max-height: 100vh;
+    text-align: center;
+    min-width: 17vw;
+    position: relative;
+}
+.menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(78, 97, 238, 0.21);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 80%;
+    padding: 0 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul li{
+    font-weight: bold;
+    padding: 1.7rem 0;
+    border-bottom: 1px solid rgb(245, 238, 238);
+    width: 100%;
+    font-size: 19px;
+} 
+.menu ul li  a {
+    text-decoration: none;
+    color:rgb(255, 228, 255);
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+.menu ul li  a:hover {
+    color: rgb(249, 228, 249);
+    transition: all .15s ease-in-out;
+    text-shadow: 2px 1px 4px rgb(234, 238, 245);
+    color: rgb(230, 163, 234);
+    font-size: 20px;
+}
+.menu ul li ol
+{
+  display: none;
+}
+.menu ul li:hover ol
+{
+  margin-top: 10%;
+  display:block;
+  background: radial-gradient(circle,  rgb(204, 226, 252) 30%, rgb(177, 210, 248) 150%);
+  padding: 10px 0px;
+  box-shadow: 0px 0px 50px 0px rgba(115, 175, 209, 0.5);
+}
+.search-btn:hover ul{
+    display: block;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 50px 0px rgba(115, 175, 209, 0.5);
+}
+
+/*************NAVBAR END**************/
+
+/************LOGO EDITING*************/
+
+#logo {
+    font-size: 70px;
+    font-weight: bolder;
+    font-family: 'roboto';
+    font-style: oblique;
+    color: rgb(184, 137, 184);
+    margin-bottom: 0px;
+    text-shadow: 2px 1px 7px rgb(86, 128, 184);
+}
+
+#logo-name2 {
+    color: rgb(246, 233, 233);
+    font-weight: lighter;
+    font-size: 13px;
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+#logo-name > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#logo-proff {
+    font-size: smaller;
+    color: rgb(250, 235, 235);
+    font-weight: lighter;
+    text-shadow: 2px 1px 4px rgb(86, 128, 184);
+}
+
+
+/*************FOOTER START**************/
+
+footer {
+    box-shadow: 0px 3px 58px 21px rgba(0,0,0,0.12);
+    background: radial-gradient(closest-side, rgb(184, 211, 247) 50%, rgba(0,0,0,0.12) 110%);
+    height: 20px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.163);
+    text-align:center;
+    font-weight: bolder;
+    font-size: 0.9vw;
+ 
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h1{
+       font-size: 3.3rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    h1{
+        font-size: 4rem;;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main {
+        grid-template-columns: fit-content(200px) 1fr!important;
+    }
+    nav {
+        display: flex;
+    }
+    .title-container {
+        justify-content: center;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .menu-close {
+        display: none;
+    }
+    h1#quote::before {
+        content: "<h1>...";
+        font-size:smaller;
+        font-family: 'Courier ';
+        color: rgba(108, 188, 228, 0.289);
+        text-shadow: none;
+    }
+    h1#quote::after {
+        content: "...</h1>";
+        font-size: smaller;
+        font-family: 'Courier ';
+        color: rgba(108, 188, 228, 0.289);
+    }
+    
+    h1 {
+        font-size: 4.8rem;
+    }
+
+   .icon-home img {
+    display: flex;
+   }
+
+   .area{
+    display: flex;
+   }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
