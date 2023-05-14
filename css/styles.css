@@ -24,8 +24,39 @@
             border-radius: 50%;
         } 
 
-  } 
+  }
+
+  #contactModal {
+    z-index: 1000;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: max-content;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
   
+  .closeBtn {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    border-radius: 100px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  .closeBtnHover {
+    opacity: .9;
+  }
+
   .area{ 
     display: none;
     height:100vh; 
@@ -129,6 +160,7 @@ main {
 }
 
 .container {
+    position: relative;
     min-height: 100vh;
     overflow-y: auto;
     background: radial-gradient(closest-side, rgb(254, 229, 241) 50%, rgb(157, 198, 246) 110%);
