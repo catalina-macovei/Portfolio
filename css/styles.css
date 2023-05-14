@@ -26,6 +26,14 @@
 
   }
 
+  .show {
+    display: inline-block;
+  }
+
+  .hide {
+    display: none;
+  }
+
   #contactModal {
     z-index: 1000;
     top: 0; 
@@ -33,28 +41,81 @@
     bottom: 0; 
     right: 0;
     margin: auto;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: max-content;
     position: absolute;
-    background-color: white;
     border-radius: 10px;
     padding: 10px;
   }
+
+  .modalHeader {
+    padding: 5px 5px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    background: #888888;
+  }
+
+  .modalControls {
+    gap: .2rem;
+    display: flex;
+  }
   
-  .closeBtn {
-    display: block;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: red;
+  .controlBtn {
     border-radius: 100px;
     width: 10px;
     height: 10px;
     cursor: pointer;
   }
 
-  .closeBtnHover {
+  .closeBtn {
+    background-color: red;
+  }
+
+  .minimiseBtn {
+    background-color: rgb(237, 199, 9);
+  }
+
+  .fullScreenBtn {
+    background-color: rgb(14, 222, 21);
+  }
+
+  .controlBtnHover {
+    transform: scale(1.2);
     opacity: .9;
+  }
+
+  .modalBody {
+    background: white;
+    padding: 10px;
+  }
+
+  #contactForm {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+
+  #contactForm .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  #contactForm .inputWrapper .errorMessage {
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+  }
+
+  .validInput {
+    color: green;
+  }
+
+  .invalidInput {
+    color: red;
   }
 
   .area{ 
