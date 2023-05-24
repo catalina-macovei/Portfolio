@@ -81,6 +81,11 @@ const closeClickHandler = (clearLocalStorage = true) => {     // callback functi
 
 const minimiseClickHandler = () => {     // callback function on btn click for minimise control btn
     const contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        closeClickHandler(false);
+        return;
+    }
+    
     const inputs = contactForm.querySelectorAll('input');
     const formInputs = {};
     inputs.forEach(input => {
@@ -209,8 +214,18 @@ function sendToServer(name, email, phone) {
    });
 }
 
-function messageSentSuccess() {
-    console.log('done');
+function messageSentSuccess(message) {
+    document.querySelector('.fullScreenBtn').remove();
+    localStorage.removeItem('contactForm');
+    const modalBody = document.querySelector('.modalBody');
+    if (!modalBody){
+        return;
+    }
+    modalBody.style.height = `${modalBody.clientHeight}px`;
+    modalBody.style.display = 'flex';
+    modalBody.style.textAlign = 'center';
+    modalBody.style.alignItems = 'center';
+    modalBody.innerHTML = `<h3> ${message} </h3>`;
 }
 
 function isEmptyInput(input, timeoutId) {  // isInputValid + regex
@@ -249,7 +264,6 @@ function setErrorMessage(name, valid = false) {
         errorMessage.style.color = valid ? 'green' : 'red';
     }
 }
-
 
 //Validation input with RegExp:
 

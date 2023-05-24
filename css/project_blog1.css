@@ -1,3 +1,10 @@
+.pokemon-search {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-items: center;
+}
+
 /************DEFAULTS*************/
 body {
     margin: 0;
