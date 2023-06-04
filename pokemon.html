@@ -46,8 +46,11 @@
                 <div>
                     <div class="pokemon-search">
                         <h2>Pokemon Wiki</h2>
-                        <div>
-                          <input type="text" name="pokemon" id="pokemon">  
+                        <div class="pokemon-search__container">
+                          <div class="pokemon-search__input">
+                            <input type="text" name="pokemon" id="pokemon" placeholder="Enter pokemon name">
+                            <small class="pokemon-search__error"></small>
+                          </div> 
                           <button onclick="pokemonSiri()" type="button">Search</button>  
                         </div>
                     </div>
@@ -57,7 +60,7 @@
                         </div>
                         <div class="container-text">
                             <p>
-                                Aipom, Amaura, Pikachu, Blissey
+                                Aipom, Amaura, Pikachu, Blissey, Blastoise
                             </p>
                         </div>  
                     </div>

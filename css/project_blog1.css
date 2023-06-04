@@ -201,6 +201,21 @@ ul,ol {
     padding: 10px 0px;
     box-shadow: 0px 0px 50px 0px rgba(115, 175, 209, 0.5);
 }
+.pokemon-search__container {
+    display: flex;
+    align-items: start;
+    gap: .3rem;
+}
+
+.pokemon-search__input {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+}
+
+.pokemon-search__error {
+    color: red;
+}
 
 /*************NAVBAR END**************/
 
